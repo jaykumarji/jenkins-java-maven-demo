@@ -12,7 +12,12 @@ pipeline {
         stage('Build and Test') {
             steps {
                 sh 'java -version'
-                sh 'mvn -B clean verify'
+        sh 'mvn -version'
+        sh 'echo $JAVA_HOME'
+        sh 'which java'
+        sh 'which javac'
+        sh 'javac -version'
+        sh 'mvn -B clean verify'
             }
         }
     }
